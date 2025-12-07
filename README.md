@@ -8,7 +8,7 @@ OS: Ubuntu24.04
 git clone <ssh or https> ~/.config/nvim
 ```
 
-2. NeoVim本体のインストール
+2. NeoVim本体のインストール<br>
 参考URL：https://neovim.io/doc/install/
 ```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
@@ -45,7 +45,7 @@ fc-cache -fv
 - 一度全てのターミナルを閉じる
 - 再度ターミナルを起動してフォントが直っていればOK
 
-8. lazygitのインストール
+8. lazygitのインストール<br>
 参考URL：https://github.com/jesseduffield/lazygit
 ```
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
