@@ -5,7 +5,7 @@ OS: Ubuntu24.04
 
 1. 本リポジトリをローカルにクローン
 ```
-git clone <ssh or https> ~/.config/nvim
+git clone <ssh or https> ~/.config/
 ```
 
 2. NeoVim本体のインストール<br>
