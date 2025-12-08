@@ -22,7 +22,20 @@ vim.lsp.config("*", {
 })
 
 -- 個別に追加設定したいものがあればここに書く
--- 例: YAML だけ schema 追加したい場合
+-- Pyright個別設定
+-- Pyright 用の個別設定：.venv を見るようにする
+vim.lsp.config("pyright", {
+    settings = {
+        python = {
+            -- プロジェクト直下に .venv/ がある想定
+            venvPath = ".",      -- .venv の親ディレクトリ
+            venv = ".venv",      -- 仮想環境名
+            pythonPath = "./.venv/bin/python3", -- 明示的に Python を指定してもOK
+        },
+    },
+})
+
+-- YAML個別設定
 vim.lsp.config("yamlls", {
     settings = {
         yaml = {
