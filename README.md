@@ -35,7 +35,7 @@ git clone https://github.com/folke/lazy.nvim.git \
 6. 必要パッケージのインストール
 ```
 sudo apt update
-sudo apt install -y build-essential xclip
+sudo apt install -y build-essential xclip ripgrep
 ```
 
 LSPがNode.jsで作られているためnpm, node.jsも入れる

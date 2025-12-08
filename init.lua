@@ -1,6 +1,8 @@
 vim.opt.rtp:prepend("~/.local/share/nvim/lazy/lazy.nvim")
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff", bold = true })
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
+vim.opt.cursorline = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.termguicolors = true
@@ -177,12 +179,10 @@ require("lazy").setup({
     },
 })
 
--- =====================
 -- カラースキーム適用
--- =====================
 vim.cmd("colorscheme noctis_obscuro")
-
 
 -- lsp config読み出し
 require("config.lsp")
 require("config.cmp")
+
