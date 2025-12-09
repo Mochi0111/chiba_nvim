@@ -3,6 +3,7 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ffffff", bold = true })
 vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.cursorline = true
+vim.opt.swapfile = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.termguicolors = true

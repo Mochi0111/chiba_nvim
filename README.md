@@ -70,6 +70,42 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 ```
 
+## tmuxセットアップ
+tmux: ターミナル管理ツール<br><br>
+
+1. tmuxインストール
+```
+sudo apt install tmux
+```
+2. カラー定義確認
+以下実行してterminfoの内容が並べばOK
+```
+infocmp tmux-256color
+```
+3. ~/.tmux.conf定義
+※一緒に便利なキーバインドも定義
+以下内容を"\~/.tmux.conf"に記載
+```
+set -g mouse on
+setw -g mode-keys vi
+
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",xterm-256color:RGB"
+
+bind -n C-h select-pane -L
+bind -n C-j select-pane -D
+bind -n C-k select-pane -U
+bind -n C-l select-pane -R
+
+bind -n M-h split-window -h
+bind -n M-v split-window -v
+```
+4. tmux再起動 ※起動しているtmuxセッションなければSkip
+```
+tmux kill-server
+```
+※カラースキームの適用のためには完全再起動必要なためkill-server
+
 ## Docker連携
 - 基本的にはホストでファイル編集して、コンテナ上で実行
 - formatterが機能しないのはpyright
