@@ -20,11 +20,12 @@ keymap("n", "<Space>", "<Nop>", {silent = true})
 keymap("n", "<leader>w", ":w<CR>")
 keymap("n", "<leader>q", ":q<CR>")
 keymap("n", "<leader>co", "<cmd>copen<CR>", { silent = true })
-keymap("n", "<leader>cc", "<cmf>cclose<CR>", { silent = true })
+keymap("n", "<leader>cc", "<cmd>cclose<CR>", { silent = true })
 keymap("n", "<C-h>", "<C-w>h")
 keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
+keymap("n", "<leader>lr", ":LspRestart<CR>", { desc = "Restart LSP"})
 
 require("lazy").setup({
 	-- カラースキーム
